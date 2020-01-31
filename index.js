@@ -14,8 +14,8 @@ function isWinner (obj){
 function superbowlWin(record){
  
   const res = record.find(({ result }) => result === 'W' );
-  if(fi.isWinner){
-    return res.year
+  if(record.find(isWinner)){
+    return record.find(isWinner).year
   }
   else return undefined;
 }
